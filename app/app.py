@@ -70,10 +70,10 @@ def lenguajes():
     return render_template('lenguajes.html', data=data)
 #___________________________________
 
+# HTTP: 
 
-
-# se implementamn reglas de flask para que el entonro se actualice automaticamente y no se tenga que cerrar y abrir a cada momento el servidor
-# el app.run(debug=True, port=5005) indica que habilite el modo debug y podemos establecer un puerto personalziado
+# se implementam reglas de flask para que el entorno se actualice automaticamente y no se tenga que cerrar y abrir a cada momento el servidor
+# el app.run(debug=True, port=5005) indica que habilite el modo debug (automaticos cambios) y podemos establecer un puerto personalizado
 if __name__ == '__main__':
     app.add_url_rule('/', view_func=index)
     app.run(debug=True, port=5005)
