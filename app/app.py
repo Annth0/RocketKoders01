@@ -80,15 +80,19 @@ def lenguajes():
 # HTTP: Hypertext Transfer Protocol
 # GET, POST, PUT, DELETE.
 
-
 @app.route('/datos')
 def datos():
-    valor1 = request.args.get('valor1')
-# impresion en consola de los elementos de la petición
+    a = request.args.get('valor1')
+    b = int(request.args.get('valor2'))
+    c = request.args.get('valor3')
+# impresion en consola de los elementos de la petición - enlace
     # print(request.args)
-    # en navegador va: http://127.0.0.1:5005/datos?valor1=pepe en donde después del signo ? se añade lo que estamos obteniendo para mostrar en la página
-    '''obtener el valor que contenga el arggumento con llave valor1'''
-    return 'Estos son los datos: {0}'.format(valor1)
+    # en navegador va: http://127.0.0.1:5005/datos?valor1=pepe
+    # # en navegador va: http://127.0.0.1:5005/datos?valor1=pepe&valor2=23&valor3=sandías
+    # en donde después del signo ? se añade lo que estamos obteniendo para mostrar en la página
+    '''obtener el valor que contenga el arggumento con llave que ahora tiene nombre valor1 pero se puede cambiar y poner más llaves, se pueden poner mas concatenando con el simbolo &'''
+    return 'Estos son los datos: nombre {0}, edad: {1}, gusta: {2}'.format(a,b,c)
+
 
 
 # se implementam reglas de flask para que el entorno se actualice automaticamente y no se tenga que cerrar y abrir a cada momento el servidor
