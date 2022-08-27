@@ -6,6 +6,14 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+@app.before_request
+def before_request():
+    print ('Antes de la petición')
+    
+@app.after_request
+def after_request():
+    print ('Después de la petición')
+
 """ @app.route('/')
 def index():
     return "Rockert Koders 1"
@@ -13,6 +21,7 @@ def index():
 
 
 def index():
+    print ('Accediendo a la vista')
     # establecer pagina principal o mensaje solito
     # return "Bienvenido a la pagina principal del Koder Anthonn - de prueba."
     # establecer configuracion de plantilla (template)
