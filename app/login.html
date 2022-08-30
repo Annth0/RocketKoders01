@@ -7,26 +7,26 @@
     <meta name="description" content="">
     <meta name="author" content="Anth0">
     <title>Signin Home v1</title>
-
+<link rel="stylesheet" href="css/login.css">
     <!-- Favicons -->
     <link rel="icon" href="media/logo1bw.jpg" sizes="32x32" type="image/jpg">
 </head>
 
 
-<body class="body-login">
+<body>
 
-    <main class="">
-        <form>
-            <img src="" alt="" width="72" height="57">
-            <h1 class="Inicio-text">Ingresa a tu cuenta.</h1>
+    <main class="body-login">
+        <form >
+            <img id="logo1bw" src="media/logo1bw.jpg" alt="Logo Rocket Kodersv2" width="200" height="200">
+            <h1>Ingresa a tu cuenta.</h1><hr><br><br><br>
 
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="tucorreo@ejemplo.com" required>
-                <label for="floatingInput">Ingresa tu usuario o correo</label>
+                <input type="email" class="form-control" id="floatingInput" placeholder="tucorreo@ejemplo.com" required><br>
+                <label for="floatingInput">Ingresa tu usuario o correo</label><br><br>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required>
-                <label for="floatingPassword">Ingresa tu Contraseña</label>
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required><br>
+                <label for="floatingPassword">Ingresa tu Contraseña</label><br><br>
             </div>
 
             <div class="checkbox Recordar">
@@ -35,6 +35,11 @@
                 </label>
             </div>
             <button class="btn btn-lg btn-primary" type="submit">Ingresar</button>
+
+                <p>
+                ¿No tienes usuario? <br> <a href="index.html"> &capbrcup; Crear usuario &capbrcup;;  </a>                 
+                </p>
+
             <p class="footer">&copy; &reg; 2022 Rocket Koders</p>
             <p class="footer">&check; Anth0 </p>
         </form>
