@@ -1,6 +1,6 @@
 
 class config:
-    SECRET_KEY='rocketscoders2022'
+    SECRET_KEY='rocketsKoders2022'
     
 class DevelopmentConfig(config):
     DEBUG=True

@@ -1,7 +1,4 @@
 html,
-
-
-
 body {
     height: 100%;
 }
@@ -16,13 +13,13 @@ body {
     background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("./imagenes/comic.jpg");
     background-repeat: no-repeat;
     background-size:100% 100%;
-    
-    
+   
 }
+
 .container{
-    
     justify-content: center;
 }
+
 .comics-title{
     font-family: Slackey;
     font-size: 80px;
@@ -31,6 +28,7 @@ body {
     position: relative;
     top:-70px;
 }
+
 .login{
 font-family:"Inter";
 font-weight:bold;
@@ -39,8 +37,6 @@ line-height:39px;
 line-height: 100%;
 color:#ffffff;
 text-align:center;
-
-
 
 }
 
