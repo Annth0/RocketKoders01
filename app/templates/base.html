@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+ main
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.titulo }}</title>
+    <!-- se busca la url también con jinja2 por el url_for-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+    <!-- barra de navegación simple -->
+    <a href="{{ url_for('index') }}">Index |</a>
+    <a href="{{ url_for('lenguajes') }}">Lenguajes |</a>
+    <a href="{{ url_for('contacto') }}">Contacto |</a>
+    <hr> <!-- "separacion" de barra de navegación y contenido -->
+    <!-- importante cerrar bloques-->
+    {% block contenido %}
+    {% endblock %}
+    <!--del diccionario salió el h2 por el jinja-->
+    <h2>{{data.encabezado}}</h2>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+    <!--ctrol + f5 o ctrol shift + r-->
+
+</body>
+
+=======
     <title>{% block title%} {% endblock%}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
