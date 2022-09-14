@@ -1,19 +1,22 @@
 # Se debe tener instalado el Flask en el terminal
-# pip install Flask
+# pip install Flask - python app\app.py runserver
 
 from re import A
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+
 @app.before_request
 def before_request():
-    print ('Antes de la petición')
-    
+    print('Antes de la petición')
+
+
 @app.after_request
 def after_request(response):
-    print ('Después de la petición')
+    print('Después de la petición')
     return response
+
 
 """ @app.route('/')
 def index():
@@ -22,7 +25,7 @@ def index():
 
 
 def index():
-    print ('Realizando la petición')
+    print('Realizando la petición')
     # establecer pagina principal o mensaje solito
     # return "Bienvenido a la pagina principal del Koder Anthonn - de prueba."
     # establecer configuracion de plantilla (template)
@@ -90,6 +93,7 @@ def lenguajes():
 # HTTP: Hypertext Transfer Protocol
 # GET, POST, PUT, DELETE.
 
+
 @app.route('/datos')
 def datos():
     a = request.args.get('valor1')
@@ -101,8 +105,7 @@ def datos():
     # # en navegador va: http://127.0.0.1:5005/datos?valor1=pepe&valor2=23&valor3=sandías
     # en donde después del signo ? se añade lo que estamos obteniendo para mostrar en la página
     '''obtener el valor que contenga el arggumento con llave que ahora tiene nombre valor1 pero se puede cambiar y poner más llaves, se pueden poner mas concatenando con el simbolo &'''
-    return 'Estos son los datos: nombre {0}, edad: {1}, gusta: {2}'.format(a,b,c)
-
+    return 'Estos son los datos: nombre {0}, edad: {1}, gusta: {2}'.format(a, b, c)
 
 
 # se implementam reglas de flask para que el entorno se actualice automaticamente y no se tenga que cerrar y abrir a cada momento el servidor
@@ -112,4 +115,4 @@ if __name__ == '__main__':
     app.run(debug=True, port=5005)
 
 
-# ctrl + shift + f - formatear
+#  shift + alt + f - formatear
