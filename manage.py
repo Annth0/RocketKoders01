@@ -1,4 +1,4 @@
-from flask_script import Manager
+from flask_script import Manager, Server
 from app import inicializar_app
 from config import config
 from flask_script._compat import text_type
